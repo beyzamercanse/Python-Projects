@@ -4,6 +4,7 @@
 import random
 word_list = ["vienna", "amsterdam","london", "berlin", "norway"]
 chosen_word = random.choice(word_list)
+word_length = len(chosen_word)
 
 # testing code
 print(f"the solution is {chosen_word}")
@@ -27,21 +28,13 @@ def hangman():
     guess = input("enter a letter: ").lower()
 
     # TODO2, we have to index the letter in the display list to find the letter
-    for position in range(len(chosen_word)):
+    for position in range(word_length):
         letter = chosen_word[position]
         if guess == letter:
             display[position] = letter
     print(display) #todo3
 
 
-
-
-        
-
-
-    
-    
- 
 
 
 
