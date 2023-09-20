@@ -69,7 +69,9 @@ def hangman():
 # TODO2: IF GUESS IS NOT A LETTER IN THE CHOSEN WORD, REDUCE LIVES VAR BY 1. IF LIVES = 0, THE GAME SHOULD STOP AND YOU SHOULD PRINT "YOU LOST"
 
     end_game = False
+    
     while not end_game: 
+
         guess = input(" guess a letter:  ").lower()
 
         # check the guessed
