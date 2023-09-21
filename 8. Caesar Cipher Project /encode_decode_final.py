@@ -21,6 +21,7 @@ def caesar(start_text, shift_amount, cipher_direction):
         if char in alphabet:
             position = alphabet.index(char)
             new_position = position + shift_amount
+            # add the new letters to the text
             end_text += alphabet[new_position]
         else:
             end_text += char
