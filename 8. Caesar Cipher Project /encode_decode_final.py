@@ -1,5 +1,10 @@
 # this one is the better version of previous code, where we add "you want to continue?" loop.
-from art import logo
+from termcolor import colored
+from pyfiglet import Figlet
+
+f = Figlet(font='slant')
+print(colored(f.renderText('welcome to Caesar Cipher!'), 'red'))
+
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
             'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
@@ -21,9 +26,6 @@ def caesar(start_text, shift_amount, cipher_direction):
             end_text += char
     print(f"Here's the {cipher_direction}d result: {end_text}")
 
-
-# TODO-1: Import and print the logo from art.py when the program starts.
-print(logo)
 
 # TODO-4: Can you figure out a way to ask the user if they want to restart the cipher program?
 # e.g. Type 'yes' if you want to go again. Otherwise type 'no'.
