@@ -14,7 +14,7 @@ def find_highest_bid(bids):
     highest_bid = 0
     winner = " "
 
-    for bidder_person in bids:  # bidder is key nt value or   key, value
+    for bidder_person in bids:  # bidder is key. not value or key, value
         bid_amount = bids[bidder_person]
         if bid_amount > highest_bid:
             highest_bid = bid_amount
@@ -36,3 +36,5 @@ while not bids_finished:
 
 
 # command + ] for multi-shift space
+# command + / for multi-comment
+# command + \ for new coding tab aside
