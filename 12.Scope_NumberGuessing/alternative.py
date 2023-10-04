@@ -1,6 +1,8 @@
 import random
 from art import logo
 
+game_over = False
+
 
 def print_welcome_message():
     print(logo)
@@ -9,7 +11,7 @@ def print_welcome_message():
 
 
 def get_user_guess():
-    while True:
+    while not game_over:
         try:
             user_guess = int(input("Make a guess: "))
             return user_guess
@@ -50,7 +52,7 @@ def play_game():
 
 
 def play_again():
-    while True:
+    while not game_over:
         again = input("Do you want to play again? (yes/no): ").lower()
         if again == 'yes':
             play_game()

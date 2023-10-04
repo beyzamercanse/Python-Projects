@@ -55,3 +55,7 @@ def game():
 
 
 game()
+
+# you need a function to check the answer and give statements
+# you need a function to set the difficulty
+# then game
