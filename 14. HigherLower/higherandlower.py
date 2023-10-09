@@ -1,44 +1,22 @@
+# display first art
+
+# compare a:
+# display second art
+# against b:
+
+# who has more followers? "A" or "B"?
+
+# repeat :
+# sorry you are wrong , 0 - exit
+# you are right! 1,2,3, point
+# if you are right, now the higher one becomes option A , continue
+
+
 import random
 from art import logo, vs
 from game_data import data
 from replit import clear
 
-# print(len(data)) = 50
-
-# for item in data:  # spot the dictionary in list
-#     for key, value in item.items():  # spot the key in dictionary
-
-# print(data[0]) print the first dictionary in this list
-
-
-# for item in data:
-#     for key, value in item.items():
-#         print(item[0]['name'])
-
-# print(data[0].get('name')) --> this gets 'instagram'
-
-# def first_choice():
-#     # print a random number for the index of which dict you wannna choose
-#     number = random.randint(0, len(data))
-#     # print(data[number]) # get that random num index dictionary
-#     print(
-#         f"Compare A: {data[number].get('name')}, a {data[number].get('description')}, from {data[number].get('country')} ")
-
-
-# def second_choice():
-#     # print a random number for the index of which dict you wannna choose
-#     number = random.randint(0, len(data))
-#     # print(data[number]) # get that random num index dictionary
-#     print(
-#         f"Compare B: {data[number].get('name')}, a {data[number].get('description')}, from {data[number].get('country')} ")
-
-
-# print(logo)
-# first_choice()
-# print(vs)
-# second_choice()
-
-# int(input("who has more followers? Type 'A' or 'B' : "))
 
 def get_random_account():
     """Get data from random account"""
@@ -47,12 +25,15 @@ def get_random_account():
 
 def format_data(account):
     """Format account into printable format: name, description and country"""
-    name = account["name"]
-    description = account["description"]
-    country = account["country"]
-    # print(f'{name}: {account["follower_count"]}')
+    name = account['name']
+    description = account['name']
+    country = account['country']
     return f"{name}, a {description}, from {country}"
 
+
+# list = [{'aaa': 'harf1'}, {'bbb': 'harf2'}, {'ccc': 'harf3'}, {'ddd': 'harf4'}]
+# print(random.choice(list)) ==== {'ddd': 'harf4'}
+# list[0] ==== {'aaa': 'harf1'}
 
 def check_answer(guess, a_followers, b_followers):
     """Checks followers against user's guess 
@@ -72,7 +53,7 @@ def game():
     account_b = get_random_account()
 
     while game_should_continue:
-        account_a = account_b
+        account_a = account_b  # when b becomes new a
         account_b = get_random_account()
 
         while account_a == account_b:
